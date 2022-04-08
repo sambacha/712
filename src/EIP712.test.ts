@@ -4,7 +4,7 @@ import {
   EIP712Signer,
   EIP712Signature,
 } from './EIP712Signer';
-import * as ESU from 'eth-sig-util';
+import * as ESU from '@metamask/eth-sig-util';
 import { expect } from 'chai';
 import { utils, Wallet } from 'ethers';
 import BN from 'bn.js';

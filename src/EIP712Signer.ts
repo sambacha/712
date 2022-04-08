@@ -1,8 +1,17 @@
+/**
+ * @package EIP712Signer
+ * @version 0.1.0
+ * @license Apache-20
+ * @documentation {@link https://docs.manifoldfinance.com/eip712}
+ */
 import { utils } from 'ethers';
 import BN from 'bn.js';
 
 /**
+ *
  * Field in a User Defined Types
+ * @export
+ * @interface EIP712StructField
  */
 export interface EIP712StructField {
   name: string;
@@ -15,7 +24,10 @@ export interface EIP712StructField {
 export type EIP712Struct = EIP712StructField[];
 
 /**
- * Interface of the EIP712Domain structure
+ *
+ *  Interface of the EIP712Domain structure
+ * @export
+ * @interface EIP712Domain
  */
 export interface EIP712Domain {
   name: string;
@@ -25,7 +37,10 @@ export interface EIP712Domain {
 }
 
 /**
- * Interface of the complete payload required for signing
+ *
+ *  Interface of the complete payload required for signing
+ * @export
+ * @interface EIP712Payload
  */
 export interface EIP712Payload {
   types: {
@@ -76,8 +91,11 @@ export type ExternalSigner = (
 ) => Promise<EIP712Signature>;
 
 /**
+ *
  * Helper class that takes types, domain and primary when built and is able to verify provided arguments, sign payload and verify signatures
  * This class should be extended by a custom class.
+ * @export
+ * @class EIP712Signer
  */
 export class EIP712Signer {
   /**
@@ -218,7 +236,7 @@ export class EIP712Signer {
   }
 
   /**
-   * Applies a kecca256 hash to the result of _encodeData
+   * Applies a keccak256 hash to the result of _encodeData
    *
    * @param type Name of the type
    * @param data Object that is supposed to contain all fields for given type
@@ -428,7 +446,9 @@ export class EIP712Signer {
     }
     return myString;
   }
+
   /********** PUBLIC INTERFACE ***********/
+
   /**
    * Sets all information related to the signatures that will be generated.
    *
@@ -592,3 +612,4 @@ export class EIP712Signer {
     };
   }
 }
+/** @exports EIP712Signer */
