@@ -1,0 +1,54 @@
+{
+  "name": "welltyped-library-boilerplate",
+  "private": true,
+  "version": "0.0.0",
+  "license": "SEE LICENSE IN LICENSE",
+  "authors": "SEE CONTRIBUTORS",
+  "description": "",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "main": "./dist/index.js",
+      "module": "./dist/index.js",
+      "import": "./dist/index.js"
+    },
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "require": "./dist/*.js",
+      "main": "./dist/*.js",
+      "module": "./dist/*.js",
+      "import": "./dist/*.js"
+    }
+  },
+  "scripts": {
+    "build": "rollup -c ./rollup.config.js",
+    "typecheck": "tsc --noEmit --target esnext"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.0",
+    "@types/mocha": "^9.1.0",
+    "@types/node": "^16",
+    "chai": "^4.3.6",
+    "codecov": "^3.8.3",
+    "mocha": "^9.2.2",
+    "nyc": "^15.1.0",
+    "ts-mocha": "^9.0.2",
+    "tslib": "^2.3.1",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "@metamask/eth-sig-util": "^4.0.0",
+    "bn.js": "^5.2.0",
+    "eth-sig-util": "^3.0.1",
+    "ethers": "^5.6.2"
+  },
+  "peerDependencies": {}
+}
