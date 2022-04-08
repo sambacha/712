@@ -1,5 +1,7 @@
 'use strict';
 
+Object.defineProperty(exports, '__esModule', { value: true });
+
 var ethers = require('ethers');
 var BN = require('bn.js');
 
@@ -276,13 +278,6 @@ class EIP712Signer {
   }
 }
 
-var EIP712Signer$1 = /*#__PURE__*/Object.freeze({
-  __proto__: null,
-  EIP712DomainType: EIP712DomainType,
-  EIP712Signer: EIP712Signer
-});
-
-var index = { EIP712Signer: EIP712Signer$1 };
-
-module.exports = index;
+exports.EIP712DomainType = EIP712DomainType;
+exports.EIP712Signer = EIP712Signer;
 //# sourceMappingURL=index.js.map

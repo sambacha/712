@@ -270,13 +270,5 @@ class EIP712Signer {
   }
 }
 
-var EIP712Signer$1 = /*#__PURE__*/Object.freeze({
-  __proto__: null,
-  EIP712DomainType: EIP712DomainType,
-  EIP712Signer: EIP712Signer
-});
-
-var index = { EIP712Signer: EIP712Signer$1 };
-
-export { index as default };
+export { EIP712DomainType, EIP712Signer };
 //# sourceMappingURL=index.mjs.map
