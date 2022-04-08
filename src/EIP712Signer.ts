@@ -265,11 +265,12 @@ export class EIP712Signer {
 
     // If type already found or is not a struct type, stop recursive process
     if (met[type] === true || this.structs[type] === undefined) return result;
-
+// @ts-ignore
     result.push(type);
     met[type] = true;
 
     for (const field of this.structs[type]) {
+        // @ts-ignore
       result = result.concat(this._getDependenciesOf(field.type, met));
     }
 
