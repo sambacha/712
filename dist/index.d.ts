@@ -231,30 +231,4 @@ declare class EIP712Signer {
     generatePayload(data: any, primaryType: string): EIP712Payload;
 }
 
-type EIP712Signer$1_EIP712StructField = EIP712StructField;
-type EIP712Signer$1_EIP712Struct = EIP712Struct;
-type EIP712Signer$1_EIP712Domain = EIP712Domain;
-type EIP712Signer$1_EIP712Payload = EIP712Payload;
-type EIP712Signer$1_EIP712Signature = EIP712Signature;
-declare const EIP712Signer$1_EIP712DomainType: typeof EIP712DomainType;
-type EIP712Signer$1_ExternalSigner = ExternalSigner;
-type EIP712Signer$1_EIP712Signer = EIP712Signer;
-declare const EIP712Signer$1_EIP712Signer: typeof EIP712Signer;
-declare namespace EIP712Signer$1 {
-  export {
-    EIP712Signer$1_EIP712StructField as EIP712StructField,
-    EIP712Signer$1_EIP712Struct as EIP712Struct,
-    EIP712Signer$1_EIP712Domain as EIP712Domain,
-    EIP712Signer$1_EIP712Payload as EIP712Payload,
-    EIP712Signer$1_EIP712Signature as EIP712Signature,
-    EIP712Signer$1_EIP712DomainType as EIP712DomainType,
-    EIP712Signer$1_ExternalSigner as ExternalSigner,
-    EIP712Signer$1_EIP712Signer as EIP712Signer,
-  };
-}
-
-declare const _default: {
-    EIP712Signer: typeof EIP712Signer$1;
-};
-
-export { _default as default };
+export { EIP712Domain, EIP712DomainType, EIP712Payload, EIP712Signature, EIP712Signer, EIP712Struct, EIP712StructField, ExternalSigner };
