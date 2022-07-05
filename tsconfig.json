@@ -9,23 +9,29 @@
     "noFallthroughCasesInSwitch": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "moduleResolution": "node",
     "esModuleInterop": true,
     "noUnusedLocals": true,
     "rootDir": "./src",
     "outDir": "./dist",
+    "preserveValueImports": true,
+    "strictPropertyInitialization": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "isolatedModules": true,
     "noImplicitAny": false,
     "declaration": true,
     "importHelpers": true,
     "downlevelIteration": true,
-    "module": "es2015",
-    "target": "es2015",
-    "lib": [
-        "es2016",
-        "dom"
-    ],
+    "module": "node16",
+    "moduleResolution": "node16",
+    "moduleDetection": "force",
+    "target": "ESNext",
     "strict": true,
     "resolveJsonModule": true
+    "lib": [
+        "es2020",
+        "dom"
+    ],
   },
 "include": [
   "src/**/*"
